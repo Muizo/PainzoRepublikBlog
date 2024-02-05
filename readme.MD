@@ -1,0 +1,1 @@
+# Painzo Republik Business Blog
