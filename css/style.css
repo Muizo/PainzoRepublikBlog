@@ -8,9 +8,10 @@ body {
     font: 1.03rem 'Manrope', Arial, sans-serif;
     color: #333;
     margin: 0;
+    height: 100vh;
 }
 
-header {
+header, footer {
     border: 1px solid #333;
     background-color: #333;
 } 
@@ -99,8 +100,8 @@ li i.facebook:hover {
 #box {
     background-image: url("../img/img1.jpg");
     width: 100%;
-    height: 500px;
-    background-attachment: scroll;
+    height: 600px;
+    background-attachment: fixed;
     background-repeat: repeat-x;
     background-size: cover;
 
@@ -110,24 +111,173 @@ li i.facebook:hover {
 }
 
 #box .one {
-    background-color: #222;
-    width: 70%;
-    height: 100px;
-    color: orange;
+    background-color: #333;
+    width: 67%;
+    height: 220px;
+    color: #e47113;
     margin: 0 auto;
+    text-align: center;
+    padding: 0 2px;
+    line-height: 15px;
+}
+
+#box .one img {
+    height: 150px;
+    margin-bottom: 0px;
+}
+
+#box .one p {
+    font-weight: bold;
+    margin-top: 0px;
+    word-spacing: 5px;
 }
 
 .box_2 {
    display: table;
    content: "";
    clear: both;
-   border: 2px solid red;
+   z-index: 1;
+   width: 75%;
+   margin: 0 auto;
+   padding: 0px;
 }
 
 .boxes {
     float: left;
-    width: 32%;
-    border: 2px solid black;
-    height: 300px;
-    margin: 5px;
+    width: 312px;
+    border: 0.01px solid #3d3b3b4b;
+    height: 400px;
+    margin: 5px 10px;
+}
+
+.boxes figure {
+    width: 100%;
+    margin: 0px;
+}
+
+.boxes img {
+    width: 100%;
+}
+
+.boxes .caption {
+    display: flex;
+    padding: 5px 10px;
+}
+
+.boxes .circle {
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(to bottom, #8d8c8c, #d5d8dc);
+    border-radius: 50%;
+    margin-right: 2%;
+    position: relative;
+}
+
+.boxes .circle i {
+    position: absolute;
+    bottom: 2px;
+    font-size: 23px;
+    left: 9.5px;
+    z-index: 1;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 30px;
+}
+
+.boxes h2 {
+    padding-left:10px;
+}
+
+.boxes a {
+    color: currentColor;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.boxes .border {
+    width: 90%;
+    border: 0.01px solid #c4c4c4;
+    margin-left: 10px;
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+.boxes .review {
+    margin-top: 10px;
+    padding-left:10px;
+    padding-right:16px;
+}
+
+.boxes h2 a:hover {
+    color: rgb(22, 112, 247);
+}
+
+.boxes p a:hover {
+    color: rgba(24, 112, 245, 0.753);
+}
+
+.side {
+    padding-top: 20px;
+}
+
+.side .content p {
+    padding-left: 10px;
+} 
+
+.side .border{
+    margin-top: 114px;
+}
+
+footer {
+    color: #fff;
+    padding-top: 20px;
+    position: relative;
+    padding-bottom: 4px;
+    margin-top: 20px;
+}
+
+.sign-up {
+    width: 75%;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    gap: 50px;
+}
+
+input {
+    width: 450px;
+    border: 1px solid #fff;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 6px;
+    font-size: 1.09rem;
+}
+
+button {
+    padding: 11px;
+    color: #fff;
+    background: #e47113;
+    font-size: 1.09rem;
+    border: none;
+    margin-left: 5px;
+}
+
+button:hover {
+    background: #c2661a;
+}
+
+#chat {
+    position: absolute;
+    right: 0;
+    border: 1px solid #d6d3d325;
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background: #333;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
 }
