@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+}
+
 body {
     font: 1.03rem 'Manrope', Arial, sans-serif;
     color: #333;
@@ -112,7 +116,8 @@ li i.facebook:hover {
 
 #box .one {
     background-color: #333;
-    width: 67%;
+    width: 800px;
+    min-width: 200px;
     height: 220px;
     color: #e47113;
     margin: 0 auto;
@@ -123,7 +128,7 @@ li i.facebook:hover {
 
 #box .one img {
     height: 150px;
-    margin-bottom: 0px;
+    margin: auto;
 }
 
 #box .one p {
@@ -133,19 +138,24 @@ li i.facebook:hover {
 }
 
 .box_2 {
-   display: table;
-   content: "";
-   clear: both;
    z-index: 1;
    width: 75%;
-   margin: 0 auto;
-   padding: 0px;
+   max-width: 1150px;
+   margin: auto;
+   padding-left: 50px;
+  /*  border: 2px solid red; */
+}
+
+.box_2::after {
+    display: table;
+    content: "";
+    clear: both;
 }
 
 .boxes {
     float: left;
-    width: 312px;
-    border: 0.01px solid #3d3b3b4b;
+    width: 320px;
+    border:2px solid #3d3b3b4b;
     height: 400px;
     margin: 5px 10px;
 }
@@ -193,34 +203,48 @@ li i.facebook:hover {
     text-decoration: none;
 }
 
-.boxes .border {
+/* .boxes .border {
     width: 90%;
     border: 0.01px solid #c4c4c4;
     margin-left: 10px;
     margin-top: 10px;
     opacity: 0.5;
 }
-
+ */
 .boxes .review {
     margin-top: 10px;
-    padding-left:10px;
-    padding-right:16px;
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    border-top: 2px solid #c4c4c4;
 }
 
 .boxes h2 a:hover {
     color: rgb(22, 112, 247);
 }
 
-.boxes p a:hover {
-    color: rgba(24, 112, 245, 0.753);
-}
-
 .side {
     padding-top: 20px;
 }
 
+.side .review {
+    margin-top: 112px;
+}
+
+.side .third {
+    margin-top: 112px;
+}
+
+.side .lastboxes {
+    margin-top: 112px;
+}
+
 .side .content p {
     padding-left: 10px;
+} 
+
+.side .content a:hover {
+    color: rgb(22, 112, 247);
 } 
 
 .side .border{
@@ -237,15 +261,18 @@ footer {
 
 .sign-up {
     width: 75%;
+    max-width: 1150px;
     margin: 0px auto;
     margin-top: 10px;
-    padding-left: 10px;
+    padding-left: 50px;
     display: flex;
     gap: 50px;
+   /*  border: 2px solid red; */
 }
 
 input {
-    width: 450px;
+    min-width: 50%;
+    width: 476px;
     border: 1px solid #fff;
     background: #333;
     color: #fff;
@@ -281,3 +308,303 @@ button:hover {
     font-size: 1.1rem;
     letter-spacing: 2px;
 }
+
+/* |SMALL| */
+@media (max-width: 481px) {
+    body {
+        width: 100%;
+    }
+    
+    nav ul {
+        padding-left: 0;
+    }
+
+    #box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #box .one {
+        padding-top: 0;
+        padding-bottom: 10px;;
+    }
+
+    .box_2 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .boxes {
+        width: 300px;
+        overflow: hidden;
+    }
+
+    .side {
+        padding-top: 4px;
+    }
+
+    .side .review {
+        margin-top: 95px;
+    }
+
+    .side .lastboxes {
+        margin-top: 80px;
+    }
+     
+    footer {
+        margin-top: 50px;
+    }
+
+    .sign-up{
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+
+    .sign-up p {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    
+    button {
+        display: block;
+        margin: 10px auto;
+    }
+
+    #chat {
+        display: none;
+    }
+}
+
+/* |LARGE|*/
+@media (min-width: 481px) and (max-width: 1025px){
+    body {
+        width: 100%;
+    }
+    
+    nav ul {
+        padding-left: 5px;
+    }
+
+    #box {
+        width: 100%;
+        padding: 40px;
+    }
+
+    #box .one {
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+
+    .box_2 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-top: 50px;
+
+        margin-bottom: 10px;
+    }
+
+    .side {
+        padding-top: 4px;
+    }
+
+    .side .review {
+        margin-top: 128px;
+    }
+
+    .side .lastboxes {
+        margin-top: 128px;
+    }
+     
+    footer {
+        margin-top: 50px;
+    }
+
+    .sign-up{
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+
+    .sign-up p {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    
+    button {
+        display: block;
+        margin: 10px auto;
+    }
+
+    #chat {
+        display: none;
+    }
+}
+
+
+/*XL*/
+@media (min-width: 1025px) and (max-width: 1109px){
+    body {
+        width: 100%;
+    }
+    
+    nav ul {
+        padding-left: 5px;
+    }
+
+    #box {
+        width: 100%;
+        padding: 40px;
+    }
+
+    #box .one {
+        padding-top: 0;
+        padding-bottom: 10px;;
+    }
+
+    .box_2 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .boxes {
+        width: 350px;
+        overflow: hidden;
+    }
+
+    .side {
+        padding-top: 4px;
+    }
+
+    .side .review {
+        margin-top: 128px;
+    }
+
+    .side .third {
+        margin-top: 125px;
+    }
+
+    .side .lastboxes {
+        margin-top: 100px;
+    }
+     
+    footer {
+        margin-top: 50px;
+    }
+
+    input {
+        padding: 6px;
+        width: 300px;
+        min-width: 50%;
+    }
+    
+    button {
+        padding: 5px;
+        color: #fff;
+        background: #e47113;
+        font-size: 0.9rem;
+        border: none;
+    }    
+   
+} 
+
+@media (min-width: 1110px) and (max-width: 1435px){
+    body {
+        width: 100%;
+    }
+    
+    nav ul {
+        padding-left: 5px;
+    }
+
+    #box {
+        width: 100%;
+        padding: 40px;
+    }
+
+    #box .one {
+        padding-top: 0;
+        padding-bottom: 10px;;
+    }
+
+    .box_2 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .boxes {
+        width: 350px;
+        overflow: hidden;
+    }
+
+    .side {
+        padding-top: 4px;
+    }
+
+    .side .review {
+        margin-top: 128px;
+    }
+
+    .side .third {
+        margin-top: 103px;
+    }
+
+    .side .lastboxes {
+        margin-top: 100px;
+    }
+     
+    footer {
+        margin-top: 50px;
+    }
+
+    input {
+        padding: 6px;
+        width: 300px;
+        min-width: 50%;
+    }
+    
+    button {
+        padding: 5px;
+        color: #fff;
+        background: #e47113;
+        font-size: 0.9rem;
+        border: none;
+    }    
+   
+} 

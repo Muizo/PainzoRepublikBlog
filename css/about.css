@@ -1,0 +1,122 @@
+body {
+    background-color: rgba(241, 241, 241, 0.767);
+}
+
+.about {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 40px;
+}
+
+.about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.box1 {
+    flex: 60%;
+    padding-right: 70px;
+}
+
+.box1 p{
+    word-spacing: 6px;
+    font-size: 1.16rem;;
+}
+
+.box2 {
+    flex: 40%;
+    padding-top: 50px;
+}
+
+figcaption {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px 15px;
+}
+
+figcaption a {
+    color: #111;
+}
+
+#name {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.sign {
+    display:block; 
+    width: 300px;
+    position: relative;
+    left: -30px;
+    top: 50px;
+}
+
+/* |SMALL| */
+
+@media (max-width: 521px) {
+   /* body {
+    width: 100%;
+   } */
+
+   .about {
+    display: block;
+    width: 100%;
+    padding: 15px;
+   }
+
+   figure {
+    overflow: auto;
+    margin: auto;
+   }
+
+   .box2 img {
+    display: block;
+    margin: auto;
+   }
+
+   .box2 figcaption {
+    display: block;
+    margin: auto;
+   }
+
+   #name p{
+    padding-left: 15px;
+   }
+}
+
+@media (max-width: 986px) {
+   .about {
+    display: block;
+    width: 100%;
+    padding: 25px;
+   }
+
+   .box2 img {
+    display: block;
+    margin: auto;
+   }
+
+   .box2 figcaption {
+    display: block;
+    margin: auto;
+   }
+
+   #name p{
+    padding-left: 25px;
+   }
+}
+
+@media (min-width: 986px) and (max-width: 1250px) {
+   .about {
+    padding: 25px;
+   }
+
+   #name p{
+    padding-left: 25px;
+   }
+}
